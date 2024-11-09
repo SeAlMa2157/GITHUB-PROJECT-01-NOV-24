@@ -26,10 +26,7 @@
          with:
            python-version: '3.x'
 
-       - name: Install pytest
-         run: pip install pytest
-
        - name: Deploy to Render
-         if: success()
+         run: |
 
            curl -X POST "https://api.render.com/deploy/srv-csnbgmtds78s7392g9p0?key=r4QYZpdSW1E" -H "Content-Type: application/json" -d '{}'
