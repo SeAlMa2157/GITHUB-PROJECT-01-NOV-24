@@ -1,5 +1,5 @@
-gosorio@DESKTOP-78GDB06:~/myapp$ cat .github/workflows/*
-   name:Deploy to Render
+
+   name: Deploy to Render
 
    on:
      push:
@@ -31,6 +31,5 @@ gosorio@DESKTOP-78GDB06:~/myapp$ cat .github/workflows/*
 
        - name: Deploy to Render
          if: success()
-         env:
-         run: |
+
            curl -X POST "https://api.render.com/deploy/srv-csnbgmtds78s7392g9p0?key=r4QYZpdSW1E" -H "Content-Type: application/json" -d '{}'
